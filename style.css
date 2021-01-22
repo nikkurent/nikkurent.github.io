@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+/* GLOBAL */
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +13,18 @@ body{
     overflow-x: hidden;
 }
 
+.title-text{
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+}
+
+:root{
+    --dark: #161920;
+    --grey: #686c74;
+    --turq: #8ddad3;
+}
 
 
 /* Hero Section*/
@@ -22,7 +35,7 @@ body{
 }
 
 #clip{
-    background: #161920;
+    background: var(--dark);
     clip-path: polygon(0 0, 0% 100%, 50% 100%);
     height: 90vh;
 }
@@ -57,8 +70,8 @@ body{
     background: transparent;
     outline: none;
     padding: 10px 30px;
-    border: 2px solid #8ddad3;
-    color: #686c74;
+    border: 2px solid var(--turq);
+    color: var(--grey);
     position: absolute;
     top: 80%;
     left: 25%;
@@ -68,17 +81,17 @@ body{
 }
 
 .box a:hover{
-    background: #8ddad3;
-    color: #161920;
+    background: var(--turq);
+    color: var(--dark);
 }
-
 
 
 /* Navbar Section */
 .navbar{
-    position: fixed;
+    position: absolute !important;
     top: 0;
     width: 100%;
+    z-index:90;
 }
 
 .nav-links{
@@ -86,146 +99,146 @@ body{
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 8%;
+    z-index: 90;
 }
 
-.navbar a{
+.navbar li{
     text-decoration: none;
-    color: #686c74;
-    margin: 25px;
+    color: var(--grey);
+    margin-left: 50px;
     font-weight: 700;
     letter-spacing: 2px;
+    list-style: none;
 }
 
-.navbar a:hover{
-    color: #8ddad3;
+.navbar li:hover{
+    color:var(--turq);
 }
+
 
 /* About me Section */
 .about{
     width: 80%;
     margin: 50px auto;
-    display: flex;
-    flex-direction: row;
 }
 
-.title-text{
-    margin-bottom: 30px;
-    font-size: 3em;
-    font-weight: 400;
-    letter-spacing: 5px;
-}
-.about-text p{
-    font-size: 1.1em;
+.about p{
+    width: 90%;
 }
 
 .about img{
-    width: 300px;
-    height: 400px;
     object-fit: cover;
-    margin: 55px 0 0 55px;
+    object-position: 60% 40%;
+    
 }
-
 
 
 /* Skills Section */
 .skills{
-    margin-top: 30px;
-    position:absolute;
+    margin-top: 50px;;
+}
+.skills ul{
+    margin-left: -52px;
 }
 
 .skills li{
     list-style: none;
-    padding: 0 0 5px 0;
-    margin-right: 20px;
-    border-bottom: 1px solid #8ddad3;
+    margin-left: 20px;
+    border-bottom: 1px solid var(--turq);
     display: inline-block;
 }
-
 
 
 /* Projects Section */
 .projects{
     width: 80%;
-    margin: 120px auto;
+    margin: 100px auto 80px;
 }
 
 .project-box{
-    margin-top: 80px;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #8ddad3;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--turq);
 }
 
 .project-name{
     font-weight: 200;
     font-size: 2em;
     letter-spacing: 2px;
-    border-bottom: 1px solid #161920;
-    display:inline-block;
+    border-bottom: 1px solid var(--dark);
+    display: inline-block;
     width: 350px;
     margin-bottom: 30px;
 }
 
 .project-text{
-    display: inline-block;
-    width: 70%;
     margin-bottom: 30px;
-}
-
-.left{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.right{
-    width: 100%;
 }
 
 .project-img{
     width: 350px;
+    object-fit:cover;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+.events-images{
+    text-align: center;
 }
 
 .project-links{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
-    margin: 50px 0 50px 0;
+    margin-top: 50px;
 }
 
 .project-links a{
-    color:#161920;
+    color:var(--dark);
     width: 120px;
     padding: 5px;
     text-align: center;
-    border: 1px solid #161920;
+    border: 1px solid var(--dark);
     margin-right: 50px
 }
 
 .project-links a:hover{
-    background-color: #8ddad3;
+    background-color: var(--turq);
+    color:var(--dark);
+}
+
+.weather-links a{
+    height: 35px;
+    margin-top: 40px;
+}
+
+.django img{
+    width: 340px;
+}
+
+.pers-project-name{
+    margin-bottom: 0px;
+}
+
+.pers-links{
+    margin-top: 20px;
 }
 
 .projects-end{
     font-weight: 200;
     font-size: 2em;
     letter-spacing: 2px;
-    margin-top: 30px;
     display:inline-block;
 }
 
 .projects-end a{
     text-decoration: none;
-    color:#161920;
+    color:var(--dark);
 }
 
-.projects-end:hover{
-    border-bottom: 1px solid #161920;
+.projects-end:hover a{
+    border-bottom: 1px solid var(--dark);
+    color:var(--dark);
 }
-
 
 
 /* Education Section */
@@ -240,26 +253,43 @@ body{
 
 .education a{
     text-decoration: none;
-    color: #8ddad3;
+    color: var(--turq);
     font-size: 1.8em;
     font-weight: 500;
+    margin-left: 21px;
 }
 
 .education a:hover{
-    color: #161920;
+    color: var(--dark);
 }
 
 
 /* Footer Section */
 footer{
     width: 80%;
-    margin: 150px auto 50px;
+    margin: 80px auto 50px;
+}
+
+.contacts h3{
+    font-size: 1.3em;
+    font-weight: 200;
 }
 
 footer a{
+    color: var(--black);
+    border-bottom: 1px solid var(--dark);
+    text-decoration: none;
+} 
+
+footer a:hover{
+    color: var(--grey);
+    border-bottom: none;
+}
+
+footer .button{
     padding: 10px 30px;
-    border: 2px solid #8ddad3;
-    color: #161920;
+    border: 2px solid var(--turq);
+    color: var(--dark);
     cursor: pointer;
     font-size: 1em;
     text-decoration: none;
@@ -267,40 +297,86 @@ footer a{
     display: inline-block;
 }
 
-footer a:hover{
-    background: #8ddad3;
-    color: #161920;
+footer .button:hover{
+    background: var(--turq);
+    color: var(--dark);
+}
+
+footer i{
+    font-size: 3.5em;
+    position:absolute;
+    right: 10%;
+    color: var(--turq);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+footer i:hover{
+    color: var(--grey);
 }
 
 
+/* Viewports */
+@media screen and (max-width: 760px){
+    #hero{
+        height: 60vh;
+    }
 
+    #clip{
+        height: 60vh;
+    }
 
+    .hero-text{
+        white-space: initial;
+    }
 
+    .hero-img img{
+        display: none;
+    }
+    .box a{
+        top: 80%;
+        left: 12%;
+    }
 
+    .about img{
+        display: none;
+    }
 
+    .project-name{
+        width: auto;
+    }
 
+    .django img{
+        width: 280px
+    }
+
+    footer i{
+        display: none !important;
+    }
+}
 
 
 @media screen and (max-width: 768px){
-    .projects{
-        margin-top: 250px;
-    }
-
-    .project-box{
-        flex-direction: column;
+    .about p{
+        font-size: .9em;
     }
 
     .project-img{
-        width: 80%;
+        width: 250px
     }
 
-    .img2{
-        display: none;
+    .project-links{
+        margin-bottom: 40px;
+    }
+
+    .events-images{
+        text-align: left;
     }
 }
 
 
 @media screen and (max-width: 1024px){
+    /* Hero Section */
     #hero{
         height: 50vh;
     }
@@ -328,26 +404,49 @@ footer a:hover{
         left: 18%;
     }
 
+    /* Navbar Mobile/Tablet */
+    body.active{
+        overflow: hidden;
+    }
+
+    .navbar{
+        position: static !important;
+    }
+
     .navbar-toogle{
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 15px;
+        right: 15px;
         z-index: 99;
     }
     .bar{
-        width: 25px;
-        height: 3px;
-        background: #8ddad3;
+        width: 35px;
+        height: 3.5px;
+        background: var(--turq);
         display: block;
-        margin: 3.5px;
+        margin: 8px;
         cursor: pointer;
+        transition: all .5s ease;
+    }
+
+    .navbar-toogle.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .navbar-toogle.active .bar:nth-child(2){
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    .navbar-toogle.active .bar:nth-child(3){
+        transform: translateY(-15px) rotate(-45deg)
     }
 
     .nav-links{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        background: #161920;
+        background: var(--dark);
         width: 100%;
         height: 100vh;
         position:absolute;
@@ -360,11 +459,17 @@ footer a:hover{
         opacity: 1;
         transition: 1s ease;
     }
-
-    .projects{
-        margin: 250px auto 100px;
+    .navbar li{
+        margin-left: 0;
     }
+
+    /* About Section */
+    .about img{
+        height: 500px;
+    }
+
 }
+
 
 @media screen and (min-width: 1300px){
     .hero-img img{
