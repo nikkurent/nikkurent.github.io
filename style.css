@@ -88,7 +88,7 @@ body{
 
 /* Navbar Section */
 .navbar{
-    position: absolute !important;
+    position: absolute !important; /* Using important to override Bootstraps relative position */
     top: 0;
     width: 100%;
     z-index:90;
@@ -318,12 +318,10 @@ footer i:hover{
 
 /* Viewports */
 @media screen and (max-width: 760px){
-    #hero{
-        height: 60vh;
-    }
-
-    #clip{
-        height: 60vh;
+    .box a{
+        font-size: .7em;
+        padding: 7px 20px;
+        transform: translate(-20px, 75px);
     }
 
     .hero-text{
@@ -332,10 +330,6 @@ footer i:hover{
 
     .hero-img img{
         display: none;
-    }
-    .box a{
-        top: 80% !important;
-        left: 12% !important;
     }
 
     .about img{
@@ -396,7 +390,7 @@ footer i:hover{
     .hero-text{
         top: 10%;
         left: 10%;
-        font-size: clamp(3.4em, 7vw, 7em);
+        font-size: clamp(2.8em, 7vw, 7em);
     }
 
     .box a{
@@ -407,10 +401,6 @@ footer i:hover{
     /* Navbar Mobile/Tablet */
     body.active{
         overflow: hidden;
-    }
-
-    .navbar{
-        position: static !important;
     }
 
     .navbar-toogle{
