@@ -334,8 +334,8 @@ footer i:hover{
         display: none;
     }
     .box a{
-        top: 80%;
-        left: 12%;
+        top: 80% !important;
+        left: 12% !important;
     }
 
     .about img{
